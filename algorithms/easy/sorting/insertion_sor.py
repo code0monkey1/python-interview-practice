@@ -1,4 +1,3 @@
-
 def bubble_sort(arr):
 
     for f in range(len(arr)):

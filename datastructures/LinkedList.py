@@ -4,14 +4,14 @@ Add three functions to the LinkedList.
 The "insert" function will add an element to a particular
 spot in the list.
 "delete" will delete the first element with that
-particular value.
+particular data.
 Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
 
 class Element(object):
-    def __init__(self, value):
-        self.value = value
+    def __init__(self, data):
+        self.data = data
         self.next = None
 
 
@@ -45,23 +45,23 @@ class LinkedList(object):
         current = self.head
 
         while current:
-            print(current.value)
+            print(current.data)
             current = current.next
 
-    def delete(self, value):
-        """Delete the first node with a given value."""
+    def delete(self, data):
+        """Delete the first node with a given data."""
 
         prev = None
         current = self.head
 
-        while current.value != value and current.next:
-            if current.value == value:
+        while current.data != data and current.next:
+            if current.data == data:
                 prev.next = current.next
                 return
             prev = current
             current = current.next
 
-        if current.value == value:
+        if current.data == data:
             prev.next = current.next
         else:
             self.head
@@ -81,14 +81,14 @@ Ll.append(e4)
 
 # Test get_position
 # Should print 3
-# print(Ll.head.next.next.value)
+# print(Ll.head.next.next.data)
 # # Should also print 3
-# print(Ll.get_position(3).value)
+# print(Ll.get_position(3).data)
 
 # # Test insert
 # Ll.insert(e4, 3)
 # # Should print 4 now
-# print(Ll.get_position(3).value)
+# print(Ll.get_position(3).data)
 
 # Test delete
 Ll.printList()
@@ -96,8 +96,8 @@ Ll.delete(1)
 Ll.printList()
 
 # # Should print 2 now
-# print(Ll.get_position(1).value)
+# print(Ll.get_position(1).data)
 # # Should print 4 now
-# print(Ll.get_position(2).value)
+# print(Ll.get_position(2).data)
 # # Should print 3 now
-# print(Ll.get_position(3).value)
+# print(Ll.get_position(3).data)

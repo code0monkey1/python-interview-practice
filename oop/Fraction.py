@@ -28,6 +28,23 @@ class Fraction:
      new_gcd=math.gcd(new_top,new_bottom)
      
      return Fraction(new_top//new_gcd,new_bottom//new_gcd)
+   
+  def __lt__(self, other):
+     return self.top*other.bottom<other.top*self.bottom
+   
+  def __mul__(self, other):
+    new_num=self.top*other.top
+    new_bottom=self.bottom*other.bottom
+    the_gcd=math.gcd(new_num,new_bottom)
+    return Fraction(new_num//the_gcd,new_bottom//the_gcd)
+  
+  def __truediv__(self, other):
+    new_num=self.top*other.bottom 
+    new_bottom=self.bottom*other.top
+    
+    the_gcd=math.gcd(new_num,new_bottom)
+    
+    return Fraction(new_num//the_gcd,new_bottom//the_gcd)
     
 fraction1 = Fraction(3,17)
 
@@ -43,4 +60,6 @@ subtraction = fraction1-fraction2
 
 print(subtraction)
 
-print(fraction1==fraction2)
+print(fraction1/fraction2)
+
+print(15/ (7*234))

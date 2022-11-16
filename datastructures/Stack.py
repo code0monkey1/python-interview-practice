@@ -77,8 +77,6 @@ def matches(opening, closing):
 
   return opener.index(opening) == closer.index(closing)
 
-# print(isBalanced(parenthesis1))
-
         
 if __name__ == "__main__":
   num = int(input())

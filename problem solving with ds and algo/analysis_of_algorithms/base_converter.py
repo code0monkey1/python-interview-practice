@@ -1,5 +1,5 @@
 def base_converter(number,base):
-  converter='0123456789ABCDEF'
+  converter='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   
   bin_str=''
   my_list=[]

@@ -1,3 +1,5 @@
+# Practice problem https://www.codechef.com/problems/PJ10TO2
+
 def bin_to_decimal(bin):
     total=0
     

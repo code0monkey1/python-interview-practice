@@ -1,3 +1,5 @@
+# Practice problem https://www.codechef.com/problems/CONV02?tab=statement ( the example is wrong , test cases should be 3 not 2)
+
 def base_converter(number,base):
   converter='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
   
